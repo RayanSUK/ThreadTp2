@@ -10,10 +10,13 @@ import java.lang.String;
 class Exclusion{};
 public class Affichage extends Thread{
 	String texte; 
-        
+	SemaphoreBinaire sem;
      static Exclusion exclusionMutuelle = new Exclusion();
 
-	public Affichage (String txt){texte=txt;}
+	public Affichage (String txt,SemaphoreBinaire s){
+		texte=txt;
+		sem = s;
+	}
 	
 	public void run(){
 
