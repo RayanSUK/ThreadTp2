@@ -8,15 +8,20 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		Affichage TA = new Affichage("AAA");
-		Affichage TB = new Affichage("BB");
-		Affichage TC = new Affichage("CCCC");
-		Affichage TD = new Affichage("DDD");
+		//Affichage TA = new Affichage("AAA");
+		//Affichage TB = new Affichage("BB");
+		//Affichage TC = new Affichage("CCCC");
+		//Affichage TD = new Affichage("DDD");
 
+
+		Semaphore sem = new SemaphoreBinaire(1);
+		Affichage TA = new Affichage("AAA", (SemaphoreBinaire) sem); //changer dans le constructeur
+		// DEMANDER A ROBIN POUR
 		TA.start();
-		TC.start();
-		TB.start();
-		TD.start();
+//		TC.start();
+//		TB.start();
+//		TD.start();
+
 
 
 	}
